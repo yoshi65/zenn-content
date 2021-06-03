@@ -3,7 +3,7 @@ title: "terraformによりlambdaとしてコンテナイメージをデプロイ
 emoji: "👌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [terraform, aws, lambda, ecr]
-published: false
+published: true
 ---
 
 # コンテナイメージを用いたlambda
