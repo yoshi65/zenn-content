@@ -19,7 +19,7 @@ zipとコンテナイメージの両方を簡単な図で示すと以下のよ�
 
 ![](https://storage.googleapis.com/zenn-user-upload/aff378b02885523935513230.png)
 
-# terraformによりデプロイ
+# terraformによるデプロイ
 
 terraformによりlambdaの作成のみを行い、作成後のイメージ管理は行わない。
 この場合、github actions等を用いて、イメージのbuild, push, lambdaの更新までを行うと管理が楽になる。
@@ -75,6 +75,13 @@ cd lambda_hello_world_image
 ```sh
 ./hello_world.sh -d
 ```
+
+この生成に、terraformを使うか考えたけど、
+
+- ダミーイメージ自体はコンソールやcliから作る際にも活用できる
+- ecrをterraformで作ったところで、結局イメージプッシュのためのスクリプトは必要
+
+などにより、使わなかった (気が向いた時に追加するかも)。
 
 ## `update-function-code`後、すぐ`invoke`できない
 
