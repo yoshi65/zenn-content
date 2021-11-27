@@ -119,7 +119,7 @@ E-MAIL : par@earthgolf.jp
 [const](https://github.com/yoshi65/gas_utils/blob/4f76d1d4a1747a3e7206d7e4ae1f2272f5dd85f1/mail2calendar/mail2calendar_several_mails_per_day.js#L1-L6)は対象のメールに合わせて設定する必要がある。
 今回のアースゴルフアカデミーの場合、以下のようになる。
 ```js
-const QUERY_YOYAKU = 'subject:(レッスンの予約が完了しました。)'
+const QUERY_RESERVE = 'subject:(レッスンの予約が完了しました。)'
 const QUERY_CANCEL = 'subject:(レッスンの予約キャンセルが完了しました。)'
 const TITLE = "ゴルフレッスン"
 const LABEL = "アースゴルフアカデミー"
