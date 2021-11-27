@@ -3,7 +3,7 @@ title: "gmailからカレンダーに予定を自動生成、削除する"
 emoji: "⏰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [gas, googlecalendar, gmail, javascript, automation]
-published: false
+published: true
 ---
 # 何をしたのか
 - ゴルフレッスンの予約及びキャンセルのメールからカレンダーの予定を自動修正
