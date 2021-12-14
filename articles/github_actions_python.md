@@ -3,8 +3,12 @@ title: "Github actionsでpythonからPRにコメントする"
 emoji: "🤪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [python, githubactions, github]
-published: false
+published: true
 ---
+
+:::message
+[GitHub Actions Advent Calendar 2021](https://qiita.com/advent-calendar/2021/github-actions)の15日目の記事です。
+:::
 
 # 何の話
 Github actionsで環境変数から値を取得してpythonからPRにコメントする
@@ -86,13 +90,12 @@ def post(message: str):
 ```python
 comment = f"""# {result}
 <details><summary>show detail</summary>
-```
 {detail}
-```
 </details>
 """
 ```
 
 # Ref.
-- [automatic token authentication](https://docs.github.com/en/actions/security guides/automatic token authentication)
+
+- [automatic token authentication](https://docs.github.com/ja/actions/security-guides/automatic-token-authentication)
 - [environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
