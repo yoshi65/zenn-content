@@ -291,12 +291,12 @@ unresolved-import = "ignore"  # ignore_missing_imports 相当
 
 ### エラー抑制の方法
 
-**1. インラインコメント**
+**1. インラインコメント**（`--add-ignore` と同じ形式）
 ```python
-value = some_func()  # ty: ignore[invalid-argument-type]
+value = some_func()  # ty:ignore[invalid-argument-type]
 
 # 複数ルール
-value = some_func()  # ty: ignore[rule1, rule2]
+value = some_func()  # ty:ignore[rule1, rule2]
 ```
 
 **2. type: ignore も使える**（ただし全違反を抑制）
@@ -339,7 +339,7 @@ mypy では外部ライブラリは `Any` 扱いでエラーにならなかっ�
 
 ty ではライブラリ追加・更新のたびに:
 1. ty でエラーが出るか確認
-2. 必要なら `ty: ignore` を追加
+2. 必要なら `ty:ignore` を追加
 
 この作業が継続的に発生します。速度のメリットとこの手間のトレードオフを考慮して導入を判断してください。
 
