@@ -3,7 +3,7 @@ title: "Python型チェッカー「ty」はただ爆速なのか？ ― mypy・p
 emoji: "🔍"
 type: "tech"
 topics: ["Python", "ty", "mypy", "pyright", "型チェック"]
-published: false
+published: true
 ---
 
 ## TL;DR
