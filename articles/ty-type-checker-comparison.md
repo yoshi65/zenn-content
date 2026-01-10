@@ -90,7 +90,21 @@ ty check --watch src/
 ```toml
 [tool.ty.environment]
 python-version = "3.13"
+
+[tool.ty.rules]
+deprecated = "warn"              # error → 警告に下げる
+unresolved-import = "ignore"     # 外部ライブラリの import エラーを無視
 ```
+
+ty は 130 以上のルールを持ち、それぞれに severity（error/warn/ignore）を設定できます。mypy/pyright も同様の機能がありますが、命名規則や粒度が異なります。
+
+| ツール | severity 設定 | ルール数 |
+|--------|--------------|---------|
+| ty | error/warn/ignore | 130+ |
+| pyright | error/warning/none | 50+ |
+| mypy | 有効/無効のみ | 数十個 |
+
+詳細は [ty ルールリファレンス](https://docs.astral.sh/ty/reference/rules/) を参照してください。
 
 ### GitHub Actions
 
@@ -253,8 +267,6 @@ def process():  # 型注釈なし
 |------|------|-----|
 | デフォルト動作 | 型注釈なしはスキップ | **全てチェック** |
 | プラグイン | Pydantic, Django 等あり | **なし** |
-| ファイル全体 ignore | `# mypy: ignore-errors` | **不可** |
-| type narrowing | 独自アルゴリズム | 異なる場合あり |
 
 ### Pydantic / Django / SQLAlchemy を使っている場合
 
@@ -319,7 +331,6 @@ def legacy_function():
 ```toml
 [tool.ty.rules]
 invalid-argument-type = "warn"   # エラー → 警告に下げる
-unresolved-import = "ignore"     # 完全無効化
 ```
 
 **5. 一括で ignore を追加**
