@@ -1,5 +1,5 @@
 ---
-title: "ty vs mypy vs pyright: Astral製型チェッカーの実力を検証"
+title: "Python型チェッカー「ty」はただ爆速なのか？ ― mypy・pyright との比較検証"
 emoji: "🔍"
 type: "tech"
 topics: ["Python", "ty", "mypy", "pyright", "型チェック"]
@@ -104,6 +104,8 @@ ty check --output-format github src/
 ```
 ::error title=ty (invalid-assignment),file=example.py,line=16::...
 ```
+
+※ mypy/pyright はネイティブ対応がなく、専用の Action（[mypy-action](https://github.com/marketplace/actions/mypy-action)、[pyright-action](https://github.com/marketplace/actions/run-pyright)）が必要です。
 
 ## 速度比較
 
