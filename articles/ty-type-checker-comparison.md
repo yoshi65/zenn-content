@@ -102,7 +102,7 @@ ty は 130 以上のルールを持ち、それぞれに severity（error/warn/i
 |--------|--------------|---------|
 | ty | error/warn/ignore | 130+ |
 | pyright | error/warning/none | 50+ |
-| mypy | 有効/無効のみ | 数十個 |
+| mypy | 一部警告あり、レベル変更不可 | 数十個 |
 
 詳細は [ty ルールリファレンス](https://docs.astral.sh/ty/reference/rules/) を参照してください。
 
